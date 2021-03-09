@@ -28,6 +28,9 @@ class Engine:
         self._placeMines()
         self._buffer[row][column] = NO_MINE
 
+    def getBuffer(self):
+        return self._buffer
+
     def _placeMines(self):
         for row in range(self._size):
             self._buffer.append(list())
