@@ -17,7 +17,7 @@ Turn a cell
 ```
 engine.get(x, y)
 ```
-returns `MINE` if it has a mine OR
+returns `minesweeper_engine.MINE` if it has a mine OR
 returns a list of two tuples specifying positino turnable cells
 
 Get Neighbour Mine Count
