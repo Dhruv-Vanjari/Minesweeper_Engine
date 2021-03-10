@@ -15,6 +15,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import random
+import copy
 
 MINE = True
 NO_MINE = False
@@ -29,7 +30,7 @@ class Engine:
         self._buffer[row][column] = NO_MINE
 
     def getBuffer(self):
-        return self._buffer
+        return copy.deepcopy(self._buffer)
 
     def _placeMines(self):
         for row in range(self._size):
