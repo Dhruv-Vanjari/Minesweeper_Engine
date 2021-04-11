@@ -23,6 +23,9 @@ class Board:
         self.move(cell)
 
     def move(self, cell):
+        if cell[0] >= self.size or cell[1] >= self.size:
+            return None;
+
         result = self.engine.get(cell[0], cell[1])
         if result is MINE:
             self.buffer[cell[0]][cell[1]] = "*"
